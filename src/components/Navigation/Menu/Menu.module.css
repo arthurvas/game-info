@@ -1,0 +1,29 @@
+.Menu {
+    display: flex;
+}
+.Menu ul {
+    display: flex;
+    width: 100%;
+    list-style: none;
+    justify-content: space-around;
+    padding: 0;
+    margin: 0;
+}
+.Menu ul li {
+    width: 100%;
+    text-align: center;
+}
+.Menu ul li a {
+    background: #fff;
+    display: block;
+    padding: 15px 0;
+}
+.Menu .active {
+    color: red;
+    background: #eee;
+    display: block;
+    padding: 15px 0;
+}
+.Menu .active:hover, .Menu ul li a {
+    text-decoration: none;
+}

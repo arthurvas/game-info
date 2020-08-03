@@ -1,0 +1,8 @@
+.title {
+    text-align: center;
+}
+.PopulargamesLine {
+    display: flex;
+    margin-top: 25px;
+    justify-content: space-around;
+}

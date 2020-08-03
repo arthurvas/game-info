@@ -1,0 +1,14 @@
+.GameInfoList {
+    position: relative;
+}
+.GameInfoList .loading {
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    color: red;
+}
+.title {
+    text-align: center;
+    line-height: 62px;
+}

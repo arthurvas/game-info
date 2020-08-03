@@ -1,25 +1,29 @@
 import React from 'react';
-import logo from './logo.svg';
+//import {Container, Row, Col} from 'react-bootstrap';
+import Layout from './hoc/Layout/Layout'
+import {Route, Switch, Redirect} from 'react-router-dom' 
+import Gameinfo from './containers/Gameinfo/Gameinfo'
+import Populargames from './containers/Populargames/Populargames'
+import NotFound from './containers/Notfound/Notfound'
 import './App.css';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Layout>
+      <Switch>
+        <Route path="/" exact component={Gameinfo} />
+        <Route path="/popular-games"  component={Populargames} />
+        <Route path="/404" component={NotFound} />
+        <Redirect to={"/404"}/> 
+      </Switch>
+    </Layout>
+
+
+  //   <Container fluid>
+  //     <Row>
+  //       <Col><h1>Hello</h1></Col >
+  //     </Row>
+  // </Container>
   );
 }
 
